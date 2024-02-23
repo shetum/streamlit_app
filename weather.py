@@ -23,17 +23,15 @@ def display_weather_data(weather_data):
         temperature = main_data['temp'] - 273.15 
         weather_description = weather_data['weather'][0]['description']
 
-        return round(temperature, 2)
-        print(f"Temperature: {temperature:.2f}°C")
-        print(f"Humidity: {humidity}%")
-        print(f"Weather description: {weather_description.capitalize()}")
+        return [round(temperature, 2), humidity, weather_description.capitalize()]
+
  
     else:
-        return("City not found. Please try again.")
+        return ["City not found. Please try again." * 3]
  
 def main(city):
 
     weather_data = fetch_weather_data(city)
     return display_weather_data(weather_data)
 
-st.metric(label = f"Погода в {city}", value =  main(city))
+st.metric(label = f"Погода в {city}", value =  main(city)[0])
