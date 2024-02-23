@@ -9,7 +9,7 @@ st.title("Погода")
 
 city = st.text_input("Введите название города", value="Калуга")
 
-def fetch_weather_data(city):
+def fetch_weather_data(city = "Калуга"):
     base_url = 'http://api.openweathermap.org/data/2.5/weather?'
     complete_url = f"{base_url}appid={API_KEY}&q={city}"
     response = requests.get(complete_url)
