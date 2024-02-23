@@ -29,7 +29,7 @@ def display_weather_data(weather_data):
     else:
         return ["Город не найден. Попробуйте уточнить название"]
  
-def main(city):
+def main(city = "Калуга"):
 
     weather_data = fetch_weather_data(city)
     return display_weather_data(weather_data)
