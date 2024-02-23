@@ -68,7 +68,7 @@ add_page_title()
 show_pages(
     [
         Page("main.py", "Stock price", "🏠"),
-        Page("weather.py", "Gambling", "🏠"),
+        Page("weather.py", "Weather", "☀️"),
     ]
 )
 
