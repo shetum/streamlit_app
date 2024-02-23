@@ -27,7 +27,7 @@ def display_weather_data(weather_data):
 
  
     else:
-        return ["City not found. Please try again."]
+        return ["Город не найден. Попробуйте уточнить название"]
  
 def main(city):
 
